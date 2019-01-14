@@ -1,6 +1,6 @@
 # Clouds
 
-Library for Musical Constraints In Constraint Programming in Music
+Library for Musical Constraints
 
 Charlotte Truchet, Ircam 2003
 
