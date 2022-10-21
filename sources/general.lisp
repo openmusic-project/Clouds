@@ -471,7 +471,7 @@ optional input : a predicate, which is the equality on numbers "=" by default.
       ,(gen-code (second (inputs self)) 0) 
       ,(gen-code (third (inputs self)) 0)))
 
-(defmethod gen-code-call ((self box-resol))
+(defmethod gen-code-call ((self box-resol) &optional args)
    (call-gen-code self 0))
 
 #|
@@ -760,7 +760,7 @@ optional input : a predicate, which is the equality on numbers "=" by default.
        `(nth ,numout (multiple-value-list (,(intern (string (first (code (patch self)))) :om) ,.in-list))))))
 
 
-(defmethod gen-code-call ((self asbox))
+(defmethod gen-code-call ((self asbox) &optional args)
    (let ((in-list (mapcar #'(lambda (thein) (gen-code thein 0)) (inputs self))))
      `(,(intern (string (first (code (patch self)))) :om) ,.in-list)))
 
