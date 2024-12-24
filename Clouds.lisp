@@ -29,7 +29,7 @@
                   (find-library "OMClouds"))
 
 
-(om::set-lib-release 1.0)
+(om::set-lib-release 1.1)
 
 (print "
 =================================
